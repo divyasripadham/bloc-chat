@@ -1,9 +1,9 @@
 (function() {
-     function HomeCtrl() {
-        this.title = "Bloc Chat!";
+     function HomeCtrl(Room) {
+        this.allRooms = Room.all;
      }
 
      angular
          .module('blocChat')
-         .controller('HomeCtrl', HomeCtrl);
+         .controller('HomeCtrl', ['Room', HomeCtrl]);
  })();
