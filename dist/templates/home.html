@@ -1,8 +1,8 @@
-<div class="container" ng-controller="ModalCtrl as modal">
+<div class="container">
   <div class="row">
     <aside class="col-md-3 sidebar">
       <h1>Bloc Chat</h1>
-      <button type="button" class="btn btn-default" ng-click="modal.open()">New Room</button>
+      <button type="button" class="btn btn-default" ng-click="home.open()">New Room</button>
       <div ng-repeat="room in home.allRooms">
         <h2>{{room.name}}</h2>
       </div>

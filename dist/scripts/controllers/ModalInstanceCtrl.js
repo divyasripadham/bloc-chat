@@ -1,6 +1,6 @@
 (function() {
      function ModalInstanceCtrl($scope, Room, $uibModalInstance) {
-         $scope.test = "Create new room";
+         $scope.title = "Create new room";
          $scope.ok = function () {
            console.log("inside instance ok function");
            Room.addRoom($scope.newRoom);
