@@ -6,6 +6,12 @@
       all: rooms,
       addRoom: function(newRoom) {
         rooms.$add(newRoom);
+      },
+      addMessage: function(roomId, message) {
+
+      },
+      getMessages: function(roomId) {
+
       }
     };
   }

@@ -4,11 +4,11 @@
       <h1>Bloc Chat</h1>
       <button type="button" class="btn btn-default" ng-click="home.open()">New Room</button>
       <div ng-repeat="room in home.allRooms">
-        <h2>{{room.name}}</h2>
+        <a href="" ng-click="home.setActive(room)">{{room.name}}</a>
       </div>
     </aside>
     <section class="col-md-9">
-      Rest of the page!
+      {{activeRoom.name}}
     </section>
   </div>
 </div>
