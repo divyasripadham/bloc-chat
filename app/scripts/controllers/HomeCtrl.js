@@ -8,9 +8,10 @@
             size: 'sm',
           });
         };
-        this.setActive = function(room) {
+        this.getMessagesFor = function(room) {
           $scope.activeRoom = room;
           console.log("room id "+$scope.activeRoom.$id);
+          Room.getMessages($scope.activeRoom.$id);
         }
      }
 

@@ -2,6 +2,8 @@
   function Room($firebaseArray) {
     var firebaseRef = new Firebase("https://torrid-fire-7225.firebaseio.com/");
     var rooms = $firebaseArray(firebaseRef.child('rooms'));
+    var messages = $firebaseArray(firebaseRef.child('messages'));
+
     return {
       all: rooms,
       addRoom: function(newRoom) {
