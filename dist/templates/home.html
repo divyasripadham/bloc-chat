@@ -14,8 +14,9 @@
       <h3 class="flex-item2-1">{{activeRoom.name}}</h3>
   </div>
   <div class="flex-container2-2">
-      <div class="flex-item1-2">
-        messages
+      <div class="flex-item2-2" ng-repeat="message in home.messages">
+        <div class="flex-item2-3">{{message.username}}:</div>
+        {{message.content}}
       </div>
   </div>
 </div>
