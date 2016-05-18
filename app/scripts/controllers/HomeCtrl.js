@@ -1,5 +1,5 @@
 (function() {
-     function HomeCtrl($scope, Room, $uibModal) {
+     function HomeCtrl($scope, Room, Message, $uibModal) {
         var ctrl = this;
         ctrl.allRooms = Room.all;
         ctrl.open = function() {
@@ -12,11 +12,11 @@
         ctrl.getMessagesFor = function(room) {
           $scope.activeRoom = room;
           console.log("room id "+$scope.activeRoom.$id);
-          ctrl.messages = Room.getMessages($scope.activeRoom.$id);
+          ctrl.messages = Message.getMessages($scope.activeRoom.$id);
         }
      }
 
      angular
          .module('blocChat')
-         .controller('HomeCtrl', ['$scope', 'Room', '$uibModal', HomeCtrl]);
+         .controller('HomeCtrl', ['$scope', 'Room', 'Message', '$uibModal', HomeCtrl]);
  })();
