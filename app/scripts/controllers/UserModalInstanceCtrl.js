@@ -3,9 +3,12 @@
          $scope.title = "Set a username";
          $scope.ok = function () {
            console.log("inside cookie modal instance ok function");
-           $cookies.put('blocChatCurrentUser', $scope.username);
-           $rootScope.currentUser = $scope.username;
-           $uibModalInstance.close('close');
+           if(typeof $scope.username != 'undefined') {
+             console.log($scope.username);
+             $cookies.put('blocChatCurrentUser', $scope.username);
+             $rootScope.currentUser = $scope.username;
+             $uibModalInstance.close('close');
+           }
          };
      }
 
