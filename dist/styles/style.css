@@ -65,20 +65,26 @@
 
 .flex-item2-2 {
   /*background: mistyrose;*/
-  /*padding: 5px;*/
+  padding: 5px;
   width: 200px;
-  height: 40px;
+  /*height: 60px;*/
   margin-left: 20px;
+  /*border: 10px solid mistyrose;*/
 }
 
-.flex-item2-3 {
+.flex-container2-2 .name {
   font-weight: bold;
 }
 
-.fixed-container2-3 {
-  position: static;
-  bottom: 0;
-  left: 0;
-  width: 90%;
-  /*border: 3px solid #73AD21;*/
+.flex-container2-2 .time {
+  font-size:x-small;
+  font-weight: normal;
+}
+
+.flex-container2-3 {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  /*border-bottom: 2px solid black;*/
+  /*border: 10px solid mistyrose;*/
 }

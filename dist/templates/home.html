@@ -16,11 +16,13 @@
   </div>
   <div class="flex-container2-2">
       <div class="flex-item2-2" ng-repeat="message in home.messages">
-        <div class="flex-item2-3">{{message.username}}:</div>
+        <div class="name">{{message.username}}   <span class="time">{{message.createdAt | date:'medium'}}</span></div>
+        <!-- <div class="time">{{message.createdAt | date:'medium'}}</div> -->
         {{message.content}}
       </div>
   </div>
-  <div class="fixed-container2-3">
-    Enter new message here...
+  <div class="flex-container2-3">
+      <input type = "text" class = "form-control" placeholder="Enter message..." ng-model="newMessage.content">
+      <button class="btn btn-primary" type="button" ng-click="home.sendMessage()">Send</button>
   </div>
 </div>

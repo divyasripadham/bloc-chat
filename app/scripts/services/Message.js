@@ -6,9 +6,15 @@
 
     Message.getMessages = function(roomId) {
       var messages = $firebaseArray(messageRef.orderByChild('roomId').equalTo(roomId));
-        console.log(messages);
-        return messages;
+      return messages;
     };
+
+    Message.sendMessage = function(newMessage) {
+      //set timestamp before saving message
+      newMessage.createdAt = Firebase.ServerValue.TIMESTAMP;
+      var messagesArr = $firebaseArray(messageRef);
+      messagesArr.$add(newMessage);
+    }
 
     return Message;
   }
